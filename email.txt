@@ -1,0 +1,44 @@
+MIME-Version: 1.0
+Received: by 10.216.167.78 with HTTP; Sun, 2 May 2010 13:58:46 -0700 (PDT)
+X-Originating-IP: [80.193.36.146]
+In-Reply-To: <v2o980b0b71005021353m3ac543f8w4a86deec146d3930@mail.gmail.com>
+References: <i2x980b0b71005021217ha84cc9b3vf7a32b5769fadf12@mail.gmail.com>
+	 <s2o980b0b71005021256m2fb6563eg28929a6e2a4d62f1@mail.gmail.com>
+	 <m2u980b0b71005021257hcf02fa20n9d86c1408e01ba5c@mail.gmail.com>
+	 <z2n980b0b71005021259l23bfbc4r2138591b7b499e0b@mail.gmail.com>
+	 <g2p980b0b71005021327ka5a1b2a8t21afca1747d5c6ba@mail.gmail.com>
+	 <l2v980b0b71005021341ua4a75c93w23346d4673f61910@mail.gmail.com>
+	 <i2g980b0b71005021342ked4beb70ucfa1a2562fcc850f@mail.gmail.com>
+	 <g2h980b0b71005021345ldfb7e337v5bad55fb859918b3@mail.gmail.com>
+	 <j2i980b0b71005021351s39248648gb5a2a60367fdf5eb@mail.gmail.com>
+	 <v2o980b0b71005021353m3ac543f8w4a86deec146d3930@mail.gmail.com>
+Date: Sun, 2 May 2010 21:58:46 +0100
+Delivered-To: bot@cothink.co.uk
+Message-ID: <n2p980b0b71005021358k8b3c552bz3c88b8b21512f9fd@mail.gmail.com>
+Subject: Re: test
+From: Email Bot <bot@cothink.co.uk>
+To: bot@cothink.co.uk
+Content-Type: multipart/alternative; boundary=0016e6d99a6c0686460485a2be77
+
+--0016e6d99a6c0686460485a2be77
+Content-Type: text/plain; charset=ISO-8859-1
+
+content
+
+On 2 May 2010 21:53, Email Bot <bot@cothink.co.uk> wrote:
+
+> quote
+>
+
+--0016e6d99a6c0686460485a2be77
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+content<br><br><div class=3D"gmail_quote">On 2 May 2010 21:53, Email Bot <s=
+pan dir=3D"ltr">&lt;<a href=3D"mailto:bot@cothink.co.uk">bot@cothink.co.uk<=
+/a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:=
+0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex;">
+quote<br>
+</blockquote></div><br>
+
+--0016e6d99a6c0686460485a2be77--

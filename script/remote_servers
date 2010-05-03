@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /convo
+resque-web -p 8282 config/initializers/resque.rb
+script/server

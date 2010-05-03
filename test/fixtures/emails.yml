@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  to: MyString
+  cc: MyString
+  bcc: MyString
+  from: MyString
+  subject: MyString
+  body: MyText
+
+two:
+  to: MyString
+  cc: MyString
+  bcc: MyString
+  from: MyString
+  subject: MyString
+  body: MyText

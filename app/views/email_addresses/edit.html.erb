@@ -1,0 +1,20 @@
+<h1>Editing email_address</h1>
+
+<% form_for(@email_address) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @email_address %> |
+<%= link_to 'Back', email_addresses_path %>

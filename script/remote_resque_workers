@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /convo
+COUNT=5 QUEUE=* rake resque:workers &

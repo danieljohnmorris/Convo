@@ -1,0 +1,20 @@
+<h1>Convo - The Email Bot</h1>
+
+<p>Hi, here we do fun things with opt-in email - just cc the bot (bot@cothink.co.uk) to start the fun!</p>
+
+<h2>Sample thread fun</h2>
+
+<h3>Messages in thread</h3>
+<% unless @thread.empty? %>
+    <ul>
+    <% @thread.each do |message| %>
+        <li><%= link_to message.subject, message %> @ <%= message.created_at %></li>
+    <% end %>
+    </ul>
+<% else %>
+    <p>No messages.</p>
+<% end %>
+
+<h3>Frequency of involvement</h3>
+
+<img src="http://chart.apis.google.com/chart?cht=p&chs=450x170&chd=t:<%= @address_values %>&chdl=<%= @address_names %>" />

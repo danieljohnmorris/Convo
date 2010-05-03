@@ -1,0 +1,28 @@
+<h1>Editing email</h1>
+
+<% form_for(@email) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.label :body_plain %><br />
+    <%= f.text_area :body_plain %>
+  </p>
+  <p>
+    <%= f.label :body_html %><br />
+    <%= f.text_area :body_html %>
+  </p>
+  <p>
+    <%= f.label :origional %><br />
+    <%= f.text_area :origional %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @email %> |
+<%= link_to 'Back', emails_path %>

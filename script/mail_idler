@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+require File.dirname(__FILE__) + '/../config/environment.rb'
+
+# imap idle listener
+require 'imap' # monkeypatch imap to support idle
+require 'openssl'
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
+
+class MailIdlerDaemon < Daemon::Base
+  def self.start
+    puts "start idler daemon"
+
+    @config = EmailGetter.load_config
+    
+    @imap = Net::IMAP.new(@config[:server], @config[:port],true)
+    @imap.login @config[:username], @config[:password]
+    @imap.select 'INBOX'
+
+    @imap.idle do |resp|
+      Resque.enqueue(EmailGetter)
+    end
+  end
+
+  def self.stop
+    puts "stop idler dameon"
+  end
+end
+
+MailIdlerDaemon.daemonize

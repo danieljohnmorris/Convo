@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+require File.dirname(__FILE__) + '/../config/environment.rb'
+
+require 'openssl'
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
+require 'net/imap'
+
+class Net::IMAP
+ def idle(&response_handler)
+   puts "idling"
+   
+   raise LocalJumpError, "no block given" unless response_handler
+
+   response = nil
+
+   synchronize do
+     tag = Thread.current[:net_imap_tag] = generate_tag
+     cmd = "IDLE"
+     put_string "#{tag} #{cmd}#{CRLF}"
+
+     add_response_handler response_handler
+
+     begin
+       response = get_tagged_response(tag, cmd)
+
+     rescue LocalJumpError # can't break cross-threads or something
+
+     ensure
+       unless response then
+         cmd = "DONE"
+         put_string "#{cmd}#{CRLF}"
+         response = get_tagged_response(tag, cmd)
+       end
+
+       remove_response_handler response_handler
+     end
+   end
+
+   response
+ end
+end
+
+@config = EmailGetter.load_config
+
+@imap = Net::IMAP.new(@config[:imap_host], @config[:imap_port],true)
+@imap.login @config[:username], @config[:password]
+@imap.select 'INBOX'
+
+@imap.idle do |resp|
+  puts "New mail @ #{Time.now}"
+  Resque.enqueue(EmailGetter)
+end

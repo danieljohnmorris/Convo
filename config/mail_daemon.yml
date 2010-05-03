@@ -1,0 +1,23 @@
+development:
+  username: bot@cothink.co.uk
+  password: 234F83
+  pop_host: pop.gmail.com
+  pop_port: 995
+  imap_host: imap.gmail.com
+  imap_port: 993
+  
+test:
+    username: bot@cothink.co.uk
+    password: 234F83
+    pop_host: pop.gmail.com
+    pop_port: 995
+    imap_host: imap.gmail.com
+    imap_port: 993
+  
+production:
+    username: bot@cothink.co.uk
+    password: 234F83
+    pop_host: pop.gmail.com
+    pop_port: 995
+    imap_host: imap.gmail.com
+    imap_port: 993

@@ -1,0 +1,44 @@
+<h3>To</h3>
+<ul>
+<% @to.each do |email_address| %>
+    <li><%= link_to email_address.address, email_address %></li>
+<% end %>
+</ul>
+
+<h3>CC</h3>
+<ul>
+<% @cc.each do |email_address| %>
+    <li><%= link_to email_address.address, email_address %></li>
+<% end %>
+</ul>
+
+<% if @from %>
+<h3>From</h3>
+<p><%= link_to @from.first.address, @from.first %></p>
+<% end %>
+
+<hr />
+
+<p>
+  <b>Subject:</b>
+  <%=h @email.subject %>
+</p>
+
+<p>
+  <b>Body plain:</b>
+  <%=h @email.body_plain %>
+</p>
+
+<p>
+  <b>Body html:</b>
+  <%=h @email.body_html %>
+</p>
+
+<p>
+  <b>Origional:</b>
+  <%=h @email.origional %>
+</p>
+
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>

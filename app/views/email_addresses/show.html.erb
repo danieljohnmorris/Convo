@@ -1,0 +1,49 @@
+
+<p>
+  <b>Name:</b>
+  <%=h @email_address.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @email_address.address %>
+</p>
+
+<hr />
+
+<h3>To</h3>
+<% unless @to.empty? %>
+    <ul>
+    <% @to.each do |message| %>
+        <li><%= link_to message.subject, message %></li>
+    <% end %>
+    </ul>
+<% else %>
+    <p>No messages.</p>
+<% end %>
+
+<h3>CC</h3>
+<% unless @cc.empty? %>
+    <ul>
+    <% @cc.each do |message| %>
+        <li><%= link_to message.subject, message %></li>
+    <% end %>
+    </ul>
+<% else %>
+    <p>No messages.</p>
+<% end %>
+
+<h3>From</h3>
+<% unless @from.empty? %>
+    <ul>
+    <% @from.each do |message| %>
+        <li><%= link_to message.subject, message %></li>
+    <% end %>
+    </ul>
+<% else %>
+    <p>No messages.</p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_email_address_path(@email_address) %> |
+<%= link_to 'Back', email_addresses_path %>
